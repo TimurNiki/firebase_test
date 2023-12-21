@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/init/init.dart';
-import 'feature/pages/firestore_test/test_auth.dart';
+import 'feature/pages/firestore_test/firestore_test.dart';
 
 Future <void> main() async {
  await Init.init();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
           useMaterial3: true,
         ),
-        home: const Test())
+        home: const FirestoreTest())
         ;
   }
 }

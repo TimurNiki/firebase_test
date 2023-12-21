@@ -6,6 +6,6 @@ class Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthTest();
+    return const AuthTest();
   }
 }

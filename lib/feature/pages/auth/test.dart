@@ -1,4 +1,4 @@
-import 'package:firebase_test_app/core/services/authinit.dart';
+import 'package:firebase_test_app/core/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatefulWidget {
@@ -24,10 +24,10 @@ class _TestState extends State<Test> {
           onPressed: () async {
             dynamic result = await _auth.signInAnon();
             if (result == null) {
-              print('null result');
+              // print('null result');
             } else {
-              print('Sign In is Success');
-              print(result);
+              // print('Sign In is Success');
+              // print(result);
             }
           },
           child: const Text('Sign In'),

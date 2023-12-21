@@ -1,6 +1,8 @@
+
+import 'package:firebase_test_app/feature/widgets/animation/wavy_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/constants/index.dart';
+
 import '../../../core/resources/resources.dart';
 
 class SplashScreen extends ConsumerWidget {
@@ -8,17 +10,13 @@ class SplashScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           children: [
-            const Image(image: AssetImage(Images.randomLogo)),
-            Text(StringConstants.news,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall
-                    ?.copyWith(color: ColorConstants.white,
-                    fontWeight: FontWeight.bold))
+            Image(image: AssetImage(Images.randomLogo)),
+            WavyText()
+              
           ],
         ),
       ),

@@ -3,8 +3,8 @@ import 'package:firebase_test_app/core/utility/exceptions/custom_exception.dart'
 import 'package:flutter/material.dart';
 import 'model/news_model.dart';
 
-class Test extends StatelessWidget {
-  const Test({super.key});
+class FirestoreTest extends StatelessWidget {
+  const FirestoreTest({super.key});
 
   @override
   Widget build(BuildContext context) {
