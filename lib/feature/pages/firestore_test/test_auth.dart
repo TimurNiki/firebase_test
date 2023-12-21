@@ -8,8 +8,6 @@ class Test extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       appBar: AppBar(),
       body: const TestListView(),
@@ -18,14 +16,9 @@ class Test extends StatelessWidget {
 }
 
 class TestListView extends StatelessWidget {
-  const TestListView({super.key}
-
-  );
-
- 
+  const TestListView({super.key});
 
   @override
-  
   Widget build(BuildContext context) {
     CollectionReference news = FirebaseFirestore.instance.collection('news');
 
@@ -40,20 +33,19 @@ class TestListView extends StatelessWidget {
     ).get();
     return FutureBuilder(
       future: response,
-      builder: (BuildContext context,
-          AsyncSnapshot<QuerySnapshot<News?>> snapshot) {
+      builder:
+          (BuildContext context, AsyncSnapshot<QuerySnapshot<News?>> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.none:
             return const Placeholder();
           case ConnectionState.waiting:
             return const CircularProgressIndicator();
-    
+
           case ConnectionState.active:
             return const LinearProgressIndicator();
           case ConnectionState.done:
             if (snapshot.hasData) {
-              final values =
-                  snapshot.data!.docs.map((e) => e.data()).toList();
+              final values = snapshot.data!.docs.map((e) => e.data()).toList();
               return ListView.builder(
                 itemCount: values.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -74,8 +66,9 @@ class TestListView extends StatelessWidget {
             } else {
               const SizedBox();
             }
-        } return const Placeholder()
-    ;        },
+        }
+        return const Placeholder();
+      },
     );
   }
 }
