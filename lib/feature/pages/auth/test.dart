@@ -1,4 +1,4 @@
-import 'package:firebase_test_app/services/authinit.dart';
+import 'package:firebase_test_app/core/services/authinit.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatefulWidget {

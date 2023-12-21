@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'feature/pages/auth/sign.dart';
-import 'init/init.dart';
+
+import 'core/init/init.dart';
+import 'feature/pages/test_auth/test_auth.dart';
 
 Future <void> main() async {
  await Init.init();
@@ -16,11 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
           useMaterial3: true,
         ),
-        home: const SignIn());
+        home: const Test())
+        ;
   }
 }
